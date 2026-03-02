@@ -1,0 +1,17 @@
+.root{
+ --color-green: #268743;
+
+}
+
+.title-size{
+    font-size: 2rem;
+}
+.container .navbar-toggler {
+box-shadow: none;
+border-width: 2px;
+border-color: #268743;
+}
+
+.bi-filter-right{
+    font-size: 1.5rem;
+}
