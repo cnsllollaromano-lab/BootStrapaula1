@@ -12,48 +12,74 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg my-4">
-  <div class="container">
-    <a class="navbar-brand" href="#"><i class="bi bi-cake2 m-2"></i>SisNotas</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-     <i class="bi bi-filter-right"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cadastrar Notas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Estudantes</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Notas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Resumo de Notas</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conta</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Fazer Login</a></li>
-             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Criar conta</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg my-4">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-cake2 m-2"></i>SisNotas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-filter-right"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cadastrar Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Estudantes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resumo de Notas</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Conta</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Fazer Login</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Criar conta</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
 
+            </div>
+        </div>
+    </nav> 
+    
+    <!-- MODAL DE LOGIN -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="loginModal">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
-</nav>
-
+</div>
 
 
     <main class="container">
@@ -123,34 +149,195 @@
 
         <h3 class="display-6 mb-4">Resumo de Notas</h3>
         <div class="table-responsive">
-        <table class="table text-center">
-            <thead class="table-success">
-                <tr>
-                    <th>Aluno</th>
-                    <th>Disciplina</th>
-                    <th>Nota 1</th>
-                    <th>Nota 2</th>
-                    <th>Nota 3</th>
-                    <th>Nota 4</th>
-                    <th>Média</th>
-                    <th>Resultado</th>
-                </tr>
-            </thead>
+            <table class="table text-center">
+                <thead class="table-success">
+                    <tr>
+                        <th>Aluno</th>
+                        <th>Disciplina</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Nota 4</th>
+                        <th>Média</th>
+                        <th>Resultado</th>
+                    </tr>
+                </thead>
 
-            <tbody id="dados-notas"></tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="8">Dados Atualizados em: </td>
-                </tr>
-            </tfoot>
+                <tbody id="dados-notas"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="8">Dados Atualizados em: </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <h3 class="display-6 mb-4">Alunos em destaque </h3>
+
+        <section class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-4">
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <img src="./images/foto.jpg (2).jpg" class="card-img-top" alt="Foto do aluno João da Silva">
+                <div class="card-body text-center">
+                    <h5 class="card-title">João da Silva</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <div class="my-4 d-flex justify-content-center">
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-instagram"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-linkedin"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-github"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-dribbble"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-youtube"></i></a>
+                        <a href=""><i class="fs-4 mx-2 text-light bg-dark p-2 rounded bi bi-tiktok"></i></a>
+                    </div>
+                        <a href="#" class="btn btn-outline-dark w-100">Quero conectar</a>
+                </div>
+            </div>
 
 
-        </table>
-</div>
+        </section>
+
+
+
     </main>
 
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
 
 
 </html>
